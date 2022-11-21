@@ -2,26 +2,26 @@
 
 ### ADMIN
 
-- [x] CRUD Admin
-- [x] CRUD Member
-- [x] CRUD Outlet
-- [x] CRUD Paket
-- [X] CRUD Transaksi
-- [x] Unduh Laporan
+- [ ] CRUD Admin
+- [ ] CRUD Member
+- [ ] CRUD Outlet
+- [ ] CRUD Paket
+- [ ] CRUD Transaksi
+- [ ] Unduh Laporan
 
 ### PETUGAS
 
-- [x] CRUD Member
-- [x] CRUD Transaksi
-- [x] Unduh Laporan
+- [ ] CRUD Member
+- [ ] CRUD Transaksi
+- [ ] Unduh Laporan
 
 ### PEMILIK
 
-- [x] Unduh Laporan
+- [ ] Unduh Laporan
 
 ### MEMBER
 
-- [x] History Pembayaran
+- [ ] History Transaksi
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
