@@ -3,9 +3,9 @@
 ### ADMIN
 
 - [ ] CRUD Admin
-- [ ] CRUD Member
+- [x] CRUD Member
 - [X] CRUD Outlet
-- [ ] CRUD Paket
+- [x] CRUD Paket
 - [ ] CRUD Transaksi
 - [ ] Unduh Laporan
 
@@ -17,11 +17,12 @@
 
 ### PEMILIK
 
+- [ ] History Transaksi
 - [ ] Unduh Laporan
 
 ### MEMBER
 
-- [ ] History Transaksi
+- [ ] History Transaksi Berdasarkan Id Member
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
