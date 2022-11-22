@@ -4,7 +4,7 @@
 
 - [ ] CRUD Admin
 - [ ] CRUD Member
-- [ ] CRUD Outlet
+- [X] CRUD Outlet
 - [ ] CRUD Paket
 - [ ] CRUD Transaksi
 - [ ] Unduh Laporan
