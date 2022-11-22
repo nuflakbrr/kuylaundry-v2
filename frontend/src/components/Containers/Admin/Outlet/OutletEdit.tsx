@@ -50,7 +50,7 @@ const ContainersOutletEdit: FC = () => {
       no_telp: phoneOutlet,
     };
 
-    axios
+    await axios
       .put('/outlet', sendData, headerConfig())
       .then(() => {
         setStoreSuccess(true);

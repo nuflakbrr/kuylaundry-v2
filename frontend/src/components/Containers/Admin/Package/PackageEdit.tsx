@@ -46,7 +46,7 @@ const ContainersPackageEdit: FC = () => {
       harga: pricePackage,
     };
 
-    axios
+    await axios
       .put('/paket', sendData, headerConfig())
       .then(() => {
         setStoreSuccess(true);

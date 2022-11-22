@@ -27,7 +27,7 @@ const ContainersOutletAdd: FC = () => {
       no_telp: phoneOutlet,
     };
 
-    axios
+    await axios
       .post('/outlet', sendData)
       .then(() => {
         setStoreSuccess(true);

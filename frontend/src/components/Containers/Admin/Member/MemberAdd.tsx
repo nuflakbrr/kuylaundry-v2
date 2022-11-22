@@ -31,7 +31,7 @@ const ContainersMemberAdd: FC = () => {
       password: memberPassword,
     };
 
-    axios
+    await axios
       .post('/member', sendData)
       .then(() => {
         setStoreSuccess(true);

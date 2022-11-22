@@ -56,7 +56,7 @@ const ContainersMemberEdit: FC = () => {
       password: memberPassword,
     };
 
-    axios
+    await axios
       .put('/member', sendData, headerConfig())
       .then(() => {
         setStoreSuccess(true);

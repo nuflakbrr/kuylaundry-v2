@@ -25,7 +25,7 @@ const ContainersPackageAdd: FC = () => {
       harga: pricePackage,
     };
 
-    axios
+    await axios
       .post('/paket', sendData)
       .then(() => {
         setStoreSuccess(true);
