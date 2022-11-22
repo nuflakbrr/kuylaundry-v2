@@ -29,7 +29,7 @@ const OutletItemAdmin: FC<OutletItemProps> = ({
     alert('Apakah anda yakin ingin menghapus data ini?');
 
     await axios
-      .delete(`/outlet/${id}`, headerConfig)
+      .delete(`/outlet/${id}`, headerConfig())
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 
@@ -42,13 +42,13 @@ const OutletItemAdmin: FC<OutletItemProps> = ({
         <section>
           <div className="text-left">
             <h1 className="font-bold text-sm text-slate-500">Nama Outlet</h1>
-            <h1 className="font-bold text-lg text-black">
+            <h1 className="font-bold text-lg text-black capitalize">
               {nameOutlet || 'Tidak diketahui'}
             </h1>
           </div>
           <div className="block md:hidden text-left pt-5">
             <h1 className="font-bold text-sm text-slate-500">Alamat</h1>
-            <h1 className="font-bold text-lg text-black">
+            <h1 className="font-bold text-lg text-black capitalize">
               {addressOutlet || 'Tidak diketahui'}
             </h1>
           </div>
@@ -63,7 +63,7 @@ const OutletItemAdmin: FC<OutletItemProps> = ({
         <section className="hidden md:block">
           <div className="text-left">
             <h1 className="font-bold text-sm text-slate-500">Alamat</h1>
-            <h1 className="font-bold text-lg text-black">
+            <h1 className="font-bold text-lg text-black capitalize">
               {addressOutlet || 'Tidak diketahui'}
             </h1>
           </div>
