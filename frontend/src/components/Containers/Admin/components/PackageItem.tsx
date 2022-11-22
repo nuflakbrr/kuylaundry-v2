@@ -5,6 +5,7 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 
 import axios from '../../../../utils/axios';
 import { headerConfig } from '../../../../utils/headerConfig';
+import { formatCurrency } from '../../../../utils/formatCurrency';
 
 type PackageItemProps = {
   id: number;
@@ -32,14 +33,6 @@ const PackageItemAdmin: FC<PackageItemProps> = ({
       .catch((err) => console.log(err));
 
     router.reload();
-  };
-
-  // Format currency to IDR
-  const formatCurrency = (num: string) => {
-    return new Intl.NumberFormat('id-ID', {
-      style: 'currency',
-      currency: 'IDR',
-    }).format(Number(num));
   };
 
   return (
