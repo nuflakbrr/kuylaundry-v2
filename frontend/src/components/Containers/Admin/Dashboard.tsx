@@ -27,7 +27,7 @@ const ContainersDashboardAdmin: FC = () => {
     // Get Outlet Data Length
     const getOutletData = async () => {
       await axios
-        .get('/outlet', headerConfig)
+        .get('/outlet', headerConfig())
         .then((res) => setDataOutlet(res.data.data))
         .catch((err) => console.log(err));
     };
@@ -35,7 +35,7 @@ const ContainersDashboardAdmin: FC = () => {
     // Get Member Data Length
     const getMemberData = async () => {
       await axios
-        .get('/member', headerConfig)
+        .get('/member', headerConfig())
         .then((res) => setDataMember(res.data.data))
         .catch((err) => console.log(err));
     };
@@ -43,7 +43,7 @@ const ContainersDashboardAdmin: FC = () => {
     // Get Transaction Data Length
     const getTransactionData = async () => {
       await axios
-        .get('/member', headerConfig)
+        .get('/member', headerConfig())
         .then((res) => {
           setDataTransaction(res.data.data);
         })
@@ -53,7 +53,7 @@ const ContainersDashboardAdmin: FC = () => {
     // Get Admin Data Length
     const getAdminData = async () => {
       await axios
-        .get('/petugas', headerConfig)
+        .get('/petugas', headerConfig())
         .then((res) => setDataAdmin(res.data.data))
         .catch((err) => console.log(err));
     };

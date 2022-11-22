@@ -27,7 +27,7 @@ const ContainersOutletEdit: FC = () => {
   useEffect(() => {
     const getData = async () => {
       await axios
-        .get(`/outlet/${id}`, headerConfig)
+        .get(`/outlet/${id}`, headerConfig())
         .then((res) => {
           setNameOutletOld(res.data.data.nama_outlet);
           setAddressOutletOld(res.data.data.alamat);
@@ -51,7 +51,7 @@ const ContainersOutletEdit: FC = () => {
     };
 
     axios
-      .put('/outlet', sendData, headerConfig)
+      .put('/outlet', sendData, headerConfig())
       .then(() => {
         setStoreSuccess(true);
         setStoreFailed(false);

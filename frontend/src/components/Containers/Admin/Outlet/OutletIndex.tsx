@@ -16,7 +16,7 @@ const ContainersOutletIndex: FC = () => {
   useEffect(() => {
     const getData = async () => {
       await axios
-        .get('/outlet', headerConfig)
+        .get('/outlet', headerConfig())
         .then((res) => setData(res.data.data))
         .catch((err) => console.log(err));
     };
