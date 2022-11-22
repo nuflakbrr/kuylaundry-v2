@@ -19,7 +19,7 @@ const ContainersDashboardAdmin: FC = () => {
   // Required state
   const [dataOutlet, setDataOutlet] = useState([]);
   const [dataMember, setDataMember] = useState([]);
-  const [dataTransaction, setDataTransaction] = useState([]);
+  // const [dataTransaction, setDataTransaction] = useState([]);
   const [dataAdmin, setDataAdmin] = useState([]);
 
   // Fetch data from API
@@ -41,14 +41,14 @@ const ContainersDashboardAdmin: FC = () => {
     };
 
     // Get Transaction Data Length
-    const getTransactionData = async () => {
-      await axios
-        .get('/member', headerConfig())
-        .then((res) => {
-          setDataTransaction(res.data.data);
-        })
-        .catch((err) => console.log(err));
-    };
+    // const getTransactionData = async () => {
+    //   await axios
+    //     .get('/transaksi', headerConfig())
+    //     .then((res) => {
+    //       setDataTransaction(res.data.data);
+    //     })
+    //     .catch((err) => console.log(err));
+    // };
 
     // Get Admin Data Length
     const getAdminData = async () => {
@@ -61,26 +61,26 @@ const ContainersDashboardAdmin: FC = () => {
     Promise.all([
       getOutletData(),
       getMemberData(),
-      getTransactionData(),
+      // getTransactionData(),
       getAdminData(),
     ]);
   }, []);
 
   // Format currency to IDR
-  const formatCurrency = (num: string) => {
-    return new Intl.NumberFormat('id-ID', {
-      style: 'currency',
-      currency: 'IDR',
-    }).format(Number(num));
-  };
+  // const formatCurrency = (num: string) => {
+  //   return new Intl.NumberFormat('id-ID', {
+  //     style: 'currency',
+  //     currency: 'IDR',
+  //   }).format(Number(num));
+  // };
 
   // Format Date Time
-  const formatTime = (time: string) => {
-    const date = new Date(time);
-    return `${date.getDate()}/${
-      Number(date.getMonth()) + 1
-    }/${date.getFullYear()}`;
-  };
+  // const formatTime = (time: string) => {
+  //   const date = new Date(time);
+  //   return `${date.getDate()}/${
+  //     Number(date.getMonth()) + 1
+  //   }/${date.getFullYear()}`;
+  // };
 
   return (
     <>
@@ -163,7 +163,7 @@ const ContainersDashboardAdmin: FC = () => {
                     </svg>
                   </div>
                   <div className="text-right">
-                    <p className="text-2xl">{dataTransaction.length}</p>
+                    {/* <p className="text-2xl">{dataTransaction.length}</p> */}
                     <p>Total Transaksi</p>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const ContainersDashboardAdmin: FC = () => {
               <div>
                 <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                   <div className="inline-block min-w-full rounded-lg overflow-hidden">
-                    {!dataTransaction.length ? (
+                    {/* {!dataTransaction.length ? (
                       <p className="text-black dark:text-white text-center mx-auto">
                         Memuat Data📦...
                       </p>
@@ -246,7 +246,7 @@ const ContainersDashboardAdmin: FC = () => {
                         //   key={item.id_pembayaran}
                         // />
                       ))
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>
@@ -255,7 +255,7 @@ const ContainersDashboardAdmin: FC = () => {
         </div>
       </section>
 
-      <section
+      {/* <section
         className="absolute top-1 -z-10"
         ref={ref as React.RefObject<HTMLDivElement>}
       >
@@ -331,7 +331,7 @@ const ContainersDashboardAdmin: FC = () => {
             ))}
           </tbody>
         </table>
-      </section>
+      </section> */}
     </>
   );
 };
