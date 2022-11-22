@@ -2,7 +2,7 @@
 
 ### ADMIN
 
-- [ ] CRUD Admin
+- [x] CRUD Admin
 - [x] CRUD Member
 - [X] CRUD Outlet
 - [x] CRUD Paket
