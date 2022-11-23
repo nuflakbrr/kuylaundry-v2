@@ -22,7 +22,7 @@ app.get('/', auth, async (req, res) => {
 app.get('/:id', auth, async (req, res) => {
   let param = { id_transaksi: req.params.id };
 
-  await transaksi.findAll({ where: param, include: ["member", "petugas", "outlet", "detail_transaksi"] })
+  await transaksi.findAll({ where: param, include: ["member", "petugas", "outlet", "detail_transaksi", "paket"] })
   .then(result => res.json({ data: result }))
   .catch(error => res.json({ message: error.message }));
 });
@@ -30,7 +30,7 @@ app.get('/:id', auth, async (req, res) => {
 app.get('/member/:id', auth, async (req, res) => {
   let param = { id_member: req.params.id };
 
-  await transaksi.findAll({ where: param, include: ["member", "petugas", "outlet", "detail_transaksi"] })
+  await transaksi.findAll({ where: param, include: ["member", "petugas", "outlet", "detail_transaksi", "paket"] })
   .then(result => res.json({ data: result }))
   .catch(error => res.json({ message: error.message }));
 });
@@ -83,11 +83,11 @@ app.put('/', auth, async (req, res) => {
 app.delete('/:id', auth, async (req, res) => {
   let param = { id_transaksi: req.params.id };
 
-  await transaksi.destroy({ where: param })
+  await detail_transaksi.destroy({ where: param })
   .then(result => {
     res.json({ message: "Data has been deleted" })
 
-    result ? detail_transaksi.destroy({ where: param }) : null
+    result ? transaksi.destroy({ where: param }) : null
   })
   .catch(error => res.json({ message: error.message }));
 });
