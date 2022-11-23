@@ -60,8 +60,6 @@ app.post('/', async (req, res) => {
       };
 
       detail_transaksi.create(data_detail)
-      .then(results => res.json({ data_detail: results }))
-      .catch(error => res.json({ message_detail: error.message }));
     }
   })
   .catch(error => res.json({ message: error.message }));
@@ -89,11 +87,7 @@ app.delete('/:id', auth, async (req, res) => {
   .then(result => {
     res.json({ message: "Data has been deleted" })
 
-    if(result) {
-      detail_transaksi.destroy({ where: param })
-      .then(results => res.json({ message_detail: "Data has been deleted" }))
-      .catch(error => res.json({ message_detail: error.message }));
-    }
+    result ? detail_transaksi.destroy({ where: param }) : null
   })
   .catch(error => res.json({ message: error.message }));
 });
