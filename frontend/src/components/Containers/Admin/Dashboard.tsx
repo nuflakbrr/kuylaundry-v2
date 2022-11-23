@@ -5,21 +5,22 @@ import { FaCartPlus, FaFileDownload } from 'react-icons/fa';
 import Pdf from 'react-to-pdf';
 
 import SidebarAdmin from './components/Sidebar';
-// import PaymentItemAdmin from './components/PaymentItem';
+import TransactionItemAdmin from './components/TransactionItem';
 import axios from '../../../utils/axios';
 import { headerConfig } from '../../../utils/headerConfig';
+import { formatLocalTime } from '../../../utils/formatLocalTime';
 
 const ContainersDashboardAdmin: FC = () => {
   // Define ref for pdf
   const ref = createRef();
 
   // Options for pdf
-  const options = { orientation: 'landscape', unit: 'in', format: [8.8, 8.8] };
+  const options = { orientation: 'landscape', unit: 'in', format: [8.6, 8.6] };
 
   // Required state
   const [dataOutlet, setDataOutlet] = useState([]);
   const [dataMember, setDataMember] = useState([]);
-  // const [dataTransaction, setDataTransaction] = useState([]);
+  const [dataTransaction, setDataTransaction] = useState([]);
   const [dataAdmin, setDataAdmin] = useState([]);
 
   // Fetch data from API
@@ -41,14 +42,12 @@ const ContainersDashboardAdmin: FC = () => {
     };
 
     // Get Transaction Data Length
-    // const getTransactionData = async () => {
-    //   await axios
-    //     .get('/transaksi', headerConfig())
-    //     .then((res) => {
-    //       setDataTransaction(res.data.data);
-    //     })
-    //     .catch((err) => console.log(err));
-    // };
+    const getTransactionData = async () => {
+      await axios
+        .get('/transaksi', headerConfig())
+        .then((res) => setDataTransaction(res.data.data))
+        .catch((err) => console.log(err));
+    };
 
     // Get Admin Data Length
     const getAdminData = async () => {
@@ -61,31 +60,15 @@ const ContainersDashboardAdmin: FC = () => {
     Promise.all([
       getOutletData(),
       getMemberData(),
-      // getTransactionData(),
+      getTransactionData(),
       getAdminData(),
     ]);
   }, []);
 
-  // Format currency to IDR
-  // const formatCurrency = (num: string) => {
-  //   return new Intl.NumberFormat('id-ID', {
-  //     style: 'currency',
-  //     currency: 'IDR',
-  //   }).format(Number(num));
-  // };
-
-  // Format Date Time
-  // const formatTime = (time: string) => {
-  //   const date = new Date(time);
-  //   return `${date.getDate()}/${
-  //     Number(date.getMonth()) + 1
-  //   }/${date.getFullYear()}`;
-  // };
-
   return (
     <>
       <Head>
-        <title>Dashboard Admin - KuyEspepe</title>
+        <title>Dashboard Admin - KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />
@@ -163,7 +146,7 @@ const ContainersDashboardAdmin: FC = () => {
                     </svg>
                   </div>
                   <div className="text-right">
-                    {/* <p className="text-2xl">{dataTransaction.length}</p> */}
+                    <p className="text-2xl">{dataTransaction.length}</p>
                     <p>Total Transaksi</p>
                   </div>
                 </div>
@@ -203,7 +186,7 @@ const ContainersDashboardAdmin: FC = () => {
                 <div className="flex flex-wrap items-center justify-between">
                   <div className="lg:ml-40 ml-10 space-x-8">
                     <Link
-                      href="/admin/payment/add"
+                      href="/admin/transaction/add"
                       className="flex items-center justify-center bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer"
                     >
                       <FaCartPlus className="mr-2" /> Tambah Transaksi
@@ -230,23 +213,23 @@ const ContainersDashboardAdmin: FC = () => {
               <div>
                 <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                   <div className="inline-block min-w-full rounded-lg overflow-hidden">
-                    {/* {!dataTransaction.length ? (
+                    {!dataTransaction.length ? (
                       <p className="text-black dark:text-white text-center mx-auto">
                         Memuat Data📦...
                       </p>
                     ) : (
                       dataTransaction.map((item: any) => (
-                        <h1 key={item}>halo</h1>
-                        // <PaymentItemAdmin
-                        //   studentName={item.siswa.nama}
-                        //   nisn={item.nisn}
-                        //   totalPayment={item.jumlah_bayar}
-                        //   datePayment={item.tgl_bayar}
-                        //   id={item.nisn}
-                        //   key={item.id_pembayaran}
-                        // />
+                        <TransactionItemAdmin
+                          memberName={item.member.nama_member}
+                          outletName={item.outlet.nama_outlet}
+                          dateTransaction={item.tgl_transaksi}
+                          statusTransaction={item.status_pengerjaan}
+                          statusPayment={item.status_pembayaran}
+                          id={item.id_transaksi}
+                          key={item.id_transaksi}
+                        />
                       ))
-                    )} */}
+                    )}
                   </div>
                 </div>
               </div>
@@ -255,7 +238,7 @@ const ContainersDashboardAdmin: FC = () => {
         </div>
       </section>
 
-      {/* <section
+      <section
         className="absolute top-1 -z-10"
         ref={ref as React.RefObject<HTMLDivElement>}
       >
@@ -263,22 +246,22 @@ const ContainersDashboardAdmin: FC = () => {
           <thead>
             <tr>
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-sky-500 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                NISN
+                NO
               </th>
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-sky-500 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                Nama Siswa
+                Nama Member
               </th>
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-sky-500 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                Tanggal Bayar
+                Tanggal Transaksi
               </th>
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-sky-500 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                Bulan Dibayar
+                Status Transaksi
               </th>
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-sky-500 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                Tahun Dibayar
+                Status Pengerjaan
               </th>
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-sky-500 text-left text-xs font-semibold text-white uppercase tracking-wider">
-                Jumlah Bayar
+                Cabang Outlet
               </th>
             </tr>
           </thead>
@@ -288,42 +271,42 @@ const ContainersDashboardAdmin: FC = () => {
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                   <div className="flex items-center">
                     <p className="text-gray-900 whitespace-no-wrap">
-                      {item.nisn}
+                      {index + 1}
                     </p>
                   </div>
                 </td>
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                   <div className="flex items-center">
                     <p className="text-gray-900 whitespace-no-wrap">
-                      {item.siswa.nama}
+                      {item.member.nama_member}
                     </p>
                   </div>
                 </td>
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                   <div className="flex items-center">
                     <p className="text-gray-900 whitespace-no-wrap">
-                      {formatTime(item.tgl_bayar)}
+                      {formatLocalTime(item.tgl_transaksi)}
                     </p>
                   </div>
                 </td>
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                   <div className="flex items-center">
                     <p className="text-gray-900 whitespace-no-wrap">
-                      {item.bulan_dibayar}
+                      {item.status_pembayaran}
                     </p>
                   </div>
                 </td>
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                   <div className="flex items-center">
                     <p className="text-gray-900 whitespace-no-wrap">
-                      {item.tahun_dibayar}
+                      {item.status_pengerjaan}
                     </p>
                   </div>
                 </td>
                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                   <div className="flex items-center">
                     <p className="text-gray-900 whitespace-no-wrap">
-                      {formatCurrency(item.jumlah_bayar)}
+                      {item.outlet.nama_outlet}
                     </p>
                   </div>
                 </td>
@@ -331,7 +314,7 @@ const ContainersDashboardAdmin: FC = () => {
             ))}
           </tbody>
         </table>
-      </section> */}
+      </section>
     </>
   );
 };
