@@ -27,7 +27,7 @@ const ContainersOutletIndex: FC = () => {
   return (
     <>
       <Head>
-        <title>Daftar Outlet | KuyEspepe</title>
+        <title>Daftar Outlet | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

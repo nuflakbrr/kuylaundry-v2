@@ -8,7 +8,7 @@ const NotFound: FC = () => {
   return (
     <>
       <Head>
-        <title>Halaman Tidak Ditemukan - KuyEspepe</title>
+        <title>Halaman Tidak Ditemukan - KuyLaundry</title>
       </Head>
 
       <Navbar />

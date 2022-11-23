@@ -12,7 +12,7 @@ const Developers: FC = () => {
   return (
     <>
       <Head>
-        <title>Pengembang Layanan - KuyEspepe</title>
+        <title>Pengembang Layanan - KuyLaundry</title>
       </Head>
 
       <Navbar />

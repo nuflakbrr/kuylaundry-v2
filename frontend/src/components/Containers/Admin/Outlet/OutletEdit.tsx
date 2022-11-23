@@ -64,7 +64,7 @@ const ContainersOutletEdit: FC = () => {
   return (
     <>
       <Head>
-        <title>Edit Outlet | KuyEspepe</title>
+        <title>Edit Outlet | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

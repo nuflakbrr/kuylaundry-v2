@@ -65,7 +65,7 @@ const ContainersAdminUserIndex: FC = () => {
   return (
     <>
       <Head>
-        <title>Daftar Petugas | KuyEspepe</title>
+        <title>Daftar Petugas | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

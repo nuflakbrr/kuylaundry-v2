@@ -45,7 +45,7 @@ const ContainersMemberAdd: FC = () => {
   return (
     <>
       <Head>
-        <title>Tambah Member | KuyEspepe</title>
+        <title>Tambah Member | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

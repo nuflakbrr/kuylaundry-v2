@@ -43,7 +43,7 @@ const ContainersAdminUserAdd: FC = () => {
   return (
     <>
       <Head>
-        <title>Tambah Petugas | KuyEspepe</title>
+        <title>Tambah Petugas | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

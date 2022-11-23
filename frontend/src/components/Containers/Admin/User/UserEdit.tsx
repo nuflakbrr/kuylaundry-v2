@@ -67,7 +67,7 @@ const ContainersAdminUserEdit: FC = () => {
   return (
     <>
       <Head>
-        <title>Edit Petugas | KuyEspepe</title>
+        <title>Edit Petugas | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

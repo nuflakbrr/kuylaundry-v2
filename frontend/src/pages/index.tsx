@@ -27,7 +27,7 @@ const Home: FC = () => {
   return (
     <>
       <Head>
-        <title>Masuk - KuyEspepe</title>
+        <title>Masuk - KuyLaundry</title>
       </Head>
 
       <Navbar />

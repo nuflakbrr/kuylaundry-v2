@@ -39,7 +39,7 @@ const ContainersPackageAdd: FC = () => {
   return (
     <>
       <Head>
-        <title>Tambah Paket | KuyEspepe</title>
+        <title>Tambah Paket | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

@@ -41,7 +41,7 @@ const ContainersOutletAdd: FC = () => {
   return (
     <>
       <Head>
-        <title>Tambah Outlet | KuyEspepe</title>
+        <title>Tambah Outlet | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

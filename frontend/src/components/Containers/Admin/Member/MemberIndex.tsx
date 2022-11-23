@@ -42,7 +42,7 @@ const ContainersMemberIndex: FC = () => {
   return (
     <>
       <Head>
-        <title>Daftar Member | KuyEspepe</title>
+        <title>Daftar Member | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

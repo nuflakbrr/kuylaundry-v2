@@ -27,7 +27,7 @@ const ContainersPackageIndex: FC = () => {
   return (
     <>
       <Head>
-        <title>Daftar Paket | KuyEspepe</title>
+        <title>Daftar Paket | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />

@@ -60,7 +60,7 @@ const ContainersPackageEdit: FC = () => {
   return (
     <>
       <Head>
-        <title>Edit Paket | KuyEspepe</title>
+        <title>Edit Paket | KuyLaundry</title>
       </Head>
 
       <SidebarAdmin />
