@@ -6,8 +6,8 @@
 - [x] CRUD Member
 - [X] CRUD Outlet
 - [x] CRUD Paket
-- [ ] CRUD Transaksi
-- [ ] Unduh Laporan
+- [x] CRUD Transaksi
+- [x] Unduh Laporan
 
 ### PETUGAS
 
