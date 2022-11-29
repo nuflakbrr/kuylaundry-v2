@@ -5,7 +5,7 @@ import { FaCartPlus, FaFileDownload } from 'react-icons/fa';
 import Pdf from 'react-to-pdf';
 
 import SidebarCashier from './components/Sidebar';
-import TransactionItemCashier from './components/TransactionItem';
+import TransactionItem from './components/TransactionItem';
 import axios from '../../../utils/axios';
 import { headerConfig } from '../../../utils/headerConfig';
 import { formatLocalTime } from '../../../utils/formatLocalTime';
@@ -219,7 +219,7 @@ const ContainersDashboardCashier: FC = () => {
                       </p>
                     ) : (
                       dataTransaction.map((item: any) => (
-                        <TransactionItemCashier
+                        <TransactionItem
                           memberName={item.member.nama_member}
                           outletName={item.outlet.nama_outlet}
                           dateTransaction={item.tgl_transaksi}

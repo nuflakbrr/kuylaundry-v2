@@ -171,7 +171,7 @@ const SidebarCashier: FC = () => {
               <li className="items-center">
                 <button
                   className={inActiveClass}
-                  onClick={() => logout('cashier', router)}
+                  onClick={() => logout('kasir', router)}
                 >
                   <FaSignOutAlt className="mr-2 text-lg" />
                   Keluar
