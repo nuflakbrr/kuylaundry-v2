@@ -67,7 +67,7 @@ const ContainersDashboardOwner: FC = () => {
   return (
     <>
       <Head>
-        <title>Dashboard Kasir - KuyLaundry</title>
+        <title>Dashboard Pemilik - KuyLaundry</title>
       </Head>
 
       <SidebarOwner />
