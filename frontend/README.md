@@ -11,18 +11,18 @@
 
 ### PETUGAS
 
-- [ ] CRUD Member
-- [ ] CRUD Transaksi
-- [ ] Unduh Laporan
+- [x] CRUD Member
+- [x] CRUD Transaksi
+- [x] Unduh Laporan
 
 ### PEMILIK
 
-- [ ] History Transaksi
-- [ ] Unduh Laporan
+- [x] History Transaksi
+- [x] Unduh Laporan
 
 ### MEMBER
 
-- [ ] History Transaksi Berdasarkan Id Member
+- [x] History Transaksi Berdasarkan Id Member
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
