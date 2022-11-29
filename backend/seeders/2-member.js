@@ -20,14 +20,16 @@ module.exports = {
       jenis_kelamin: 'L',
       no_telp: '08123456789',
       password: md5('inikusni'),
+      level: 'member'
     }], {});
 
     await queryInterface.bulkInsert('member', [{
       nama_member: 'Sri Rahayu',
       alamat: 'Surabaya',
       jenis_kelamin: 'P',
-      no_telp: '08123456789',
+      no_telp: '08132457689',
       password: md5('inirahayu'),
+      level: 'member'
     }], {});
   },
 

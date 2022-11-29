@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     alamat: DataTypes.STRING,
     jenis_kelamin: DataTypes.STRING,
     no_telp: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    level: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'member',

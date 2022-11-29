@@ -29,7 +29,8 @@ app.post('/', async (req, res) => {
         alamat: req.body.alamat,
         jenis_kelamin: req.body.jenis_kelamin,
         no_telp: req.body.no_telp,
-        password: md5(req.body.password)
+        password: md5(req.body.password),
+        level: "member"
     }
 
     await member.create(data)
@@ -63,7 +64,8 @@ app.delete('/:id', auth, async (req, res) => {
 app.post('/member', async (req, res) => {
     let param = {
         no_telp: req.body.no_telp,
-        password: req.body.password
+        password: md5(req.body.password),
+        level: "member"
     }
 
     await member.findOne({ where: param })
