@@ -16,7 +16,7 @@ type TransactionItemProps = {
   statusPayment: string;
 };
 
-const TransactionItemCashier: FC<TransactionItemProps> = ({
+const TransactionItem: FC<TransactionItemProps> = ({
   id,
   memberName,
   outletName,
@@ -180,4 +180,4 @@ const TransactionItemCashier: FC<TransactionItemProps> = ({
   );
 };
 
-export default TransactionItemCashier;
+export default TransactionItem;

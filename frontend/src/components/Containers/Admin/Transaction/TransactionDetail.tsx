@@ -10,7 +10,7 @@ import { headerConfig } from '../../../../utils/headerConfig';
 import { formatCurrency } from '../../../../utils/formatCurrency';
 import { formatLocalTime } from '../../../../utils/formatLocalTime';
 
-const ContainersAdminTransactionDetails: FC = () => {
+const ContainersTransactionDetails: FC = () => {
   // Define Router
   const router = useRouter();
 
@@ -312,4 +312,4 @@ const ContainersAdminTransactionDetails: FC = () => {
   );
 };
 
-export default ContainersAdminTransactionDetails;
+export default ContainersTransactionDetails;

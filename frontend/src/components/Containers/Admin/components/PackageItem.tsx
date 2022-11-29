@@ -13,7 +13,7 @@ type PackageItemProps = {
   packagePrice: string;
 };
 
-const PackageItemAdmin: FC<PackageItemProps> = ({
+const PackageItem: FC<PackageItemProps> = ({
   id,
   packageName,
   packagePrice,
@@ -82,4 +82,4 @@ const PackageItemAdmin: FC<PackageItemProps> = ({
   );
 };
 
-export default PackageItemAdmin;
+export default PackageItem;

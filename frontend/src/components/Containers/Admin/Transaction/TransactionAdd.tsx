@@ -8,7 +8,7 @@ import { headerConfig } from '../../../../utils/headerConfig';
 import { bindingState } from '../../../../utils/bindingState';
 import { formatCurrency } from '../../../../utils/formatCurrency';
 
-const ContainersAdminTransactionAdd: FC = () => {
+const ContainersTransactionAdd: FC = () => {
   // Define Router
   const router = useRouter();
 
@@ -373,4 +373,4 @@ const ContainersAdminTransactionAdd: FC = () => {
   );
 };
 
-export default ContainersAdminTransactionAdd;
+export default ContainersTransactionAdd;

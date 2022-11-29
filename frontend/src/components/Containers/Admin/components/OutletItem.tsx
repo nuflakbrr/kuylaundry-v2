@@ -13,7 +13,7 @@ type OutletItemProps = {
   phoneOutlet: string;
 };
 
-const OutletItemAdmin: FC<OutletItemProps> = ({
+const OutletItem: FC<OutletItemProps> = ({
   nameOutlet,
   addressOutlet,
   phoneOutlet,
@@ -98,4 +98,4 @@ const OutletItemAdmin: FC<OutletItemProps> = ({
   );
 };
 
-export default OutletItemAdmin;
+export default OutletItem;

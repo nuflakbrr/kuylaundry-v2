@@ -9,7 +9,7 @@ import { bindingState } from '../../../../utils/bindingState';
 import { headerConfig } from '../../../../utils/headerConfig';
 import { formatLocalTime } from '../../../../utils/formatLocalTime';
 
-const ContainersAdminTransactionEdit: FC = () => {
+const ContainersTransactionEdit: FC = () => {
   // Define Router
   const router = useRouter();
 
@@ -325,4 +325,4 @@ const ContainersAdminTransactionEdit: FC = () => {
   );
 };
 
-export default ContainersAdminTransactionEdit;
+export default ContainersTransactionEdit;

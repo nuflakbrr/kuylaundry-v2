@@ -6,7 +6,7 @@ import SidebarAdmin from '../components/Sidebar';
 import axios from '../../../../utils/axios';
 import { bindingState } from '../../../../utils/bindingState';
 
-const ContainersAdminUserAdd: FC = () => {
+const ContainersUserAdd: FC = () => {
   // Define Router
   const router = useRouter();
 
@@ -163,4 +163,4 @@ const ContainersAdminUserAdd: FC = () => {
   );
 };
 
-export default ContainersAdminUserAdd;
+export default ContainersUserAdd;

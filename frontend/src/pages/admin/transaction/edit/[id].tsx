@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import ContainersAdminTransactionEdit from '../../../../components/Containers/Admin/Transaction/TransactionEdit';
+import ContainersTransactionEdit from '../../../../components/Containers/Admin/Transaction/TransactionEdit';
 
 const EditTransaction: FC = () => {
-  return <ContainersAdminTransactionEdit />;
+  return <ContainersTransactionEdit />;
 };
 
 export default EditTransaction;

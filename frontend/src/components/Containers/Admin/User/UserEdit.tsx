@@ -8,7 +8,7 @@ import axios from '../../../../utils/axios';
 import { bindingState } from '../../../../utils/bindingState';
 import { headerConfig } from '../../../../utils/headerConfig';
 
-const ContainersAdminUserEdit: FC = () => {
+const ContainersUserEdit: FC = () => {
   // Define Router
   const router = useRouter();
 
@@ -238,4 +238,4 @@ const ContainersAdminUserEdit: FC = () => {
   );
 };
 
-export default ContainersAdminUserEdit;
+export default ContainersUserEdit;

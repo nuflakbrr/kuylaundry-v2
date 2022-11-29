@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import ContainersAdminTransactionDetails from '../../../../components/Containers/Admin/Transaction/TransactionDetail';
+import ContainersTransactionDetails from '../../../../components/Containers/Admin/Transaction/TransactionDetail';
 
 const DetailTransaction: FC = () => {
-  return <ContainersAdminTransactionDetails />;
+  return <ContainersTransactionDetails />;
 };
 
 export default DetailTransaction;

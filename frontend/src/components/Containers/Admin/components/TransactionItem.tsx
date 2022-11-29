@@ -16,7 +16,7 @@ type TransactionItemProps = {
   statusPayment: string;
 };
 
-const TransactionItemAdmin: FC<TransactionItemProps> = ({
+const TransactionItem: FC<TransactionItemProps> = ({
   id,
   memberName,
   outletName,
@@ -180,4 +180,4 @@ const TransactionItemAdmin: FC<TransactionItemProps> = ({
   );
 };
 
-export default TransactionItemAdmin;
+export default TransactionItem;

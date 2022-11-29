@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import ContainersAdminUserAdd from '../../../components/Containers/Admin/User/UserAdd';
+import ContainersUserAdd from '../../../components/Containers/Admin/User/UserAdd';
 
 const AddUserAdmin: FC = () => {
-  return <ContainersAdminUserAdd />;
+  return <ContainersUserAdd />;
 };
 
 export default AddUserAdmin;

@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import ContainersAdminUserEdit from '../../../../components/Containers/Admin/User/UserEdit';
+import ContainersUserEdit from '../../../../components/Containers/Admin/User/UserEdit';
 
 const EditUserAdmin: FC = () => {
-  return <ContainersAdminUserEdit />;
+  return <ContainersUserEdit />;
 };
 
 export default EditUserAdmin;

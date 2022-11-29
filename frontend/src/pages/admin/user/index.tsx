@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import ContainersAdminUserIndex from '../../../components/Containers/Admin/User/UserIndex';
+import ContainersUserIndex from '../../../components/Containers/Admin/User/UserIndex';
 
 const IndexUserAdmin: FC = () => {
-  return <ContainersAdminUserIndex />;
+  return <ContainersUserIndex />;
 };
 
 export default IndexUserAdmin;

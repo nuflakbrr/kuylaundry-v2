@@ -8,7 +8,7 @@ import SidebarAdmin from '../components/Sidebar';
 import axios from '../../../../utils/axios';
 import { headerConfig } from '../../../../utils/headerConfig';
 
-const ContainersAdminUserIndex: FC = () => {
+const ContainersUserIndex: FC = () => {
   // Define Router
   const router = useRouter();
 
@@ -184,4 +184,4 @@ const ContainersAdminUserIndex: FC = () => {
   );
 };
 
-export default ContainersAdminUserIndex;
+export default ContainersUserIndex;
